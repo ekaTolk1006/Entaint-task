@@ -5,6 +5,8 @@ const movies = require('./controllers');
 
 router.get("/movies/popular", movies.getListOfPopularMovies);
 
+router.get("/movie/popular/getByName", movies.getPopularMovieByName);
+
 
 
 

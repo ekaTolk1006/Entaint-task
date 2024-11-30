@@ -1,0 +1,25 @@
+@use '../gVariables' as var;
+
+@mixin xs {
+    @media (min-width: #{var.$screen-xs-min}) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (min-width: #{var.$screen-sm-min}) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: #{var.$screen-md-min}) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: #{var.$screen-lg-min}) {
+        @content;
+    }
+}

@@ -1,0 +1,22 @@
+@use '../../assets/styles/gVariables' as var;
+
+.header {
+    display: flex;
+    width: 100%;
+    background-color: var.$primary ;
+    color: var.$secondary;
+    padding: var.$default-measure;
+
+    &__navigation {
+        display: flex;
+        gap: var.$default-measure ;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    a {
+        cursor: pointer;
+    }
+}

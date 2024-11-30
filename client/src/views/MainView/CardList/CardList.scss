@@ -1,0 +1,15 @@
+@use '../../../assets/styles/_gMixins/layouts.scss' as layout;
+
+.cardList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+
+    @include layout.md {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+}

@@ -1,0 +1,9 @@
+@use '../assets/styles/gVariables' as var;
+
+.layout {
+    &__mainContent {
+        padding: var.$default-measure;
+        display: flex;
+        justify-content: center;
+    }
+}
