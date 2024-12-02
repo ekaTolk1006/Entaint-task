@@ -1,4 +1,5 @@
 Read me!
+Small instruction ...
 
 First of all need to clone project, using this command - https://github.com/ekaTolk1006/Entaint-task.git
 
