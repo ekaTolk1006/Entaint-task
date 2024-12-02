@@ -1,25 +1,33 @@
-@use '../gVariables' as var;
+@use "../gVariables" as var;
 
 @mixin xs {
-    @media (min-width: #{var.$screen-xs-min}) {
-        @content;
-    }
+  @media (min-width: #{var.$screen-xs-min}) {
+    @content;
+  }
 }
 
 @mixin sm {
-    @media (min-width: #{var.$screen-sm-min}) {
-        @content;
-    }
+  @media (min-width: #{var.$screen-sm-min}) {
+    @content;
+  }
 }
 
 @mixin md {
-    @media (min-width: #{var.$screen-md-min}) {
-        @content;
-    }
+  @media (min-width: #{var.$screen-md-min}) {
+    @content;
+  }
 }
 
 @mixin lg {
-    @media (min-width: #{var.$screen-lg-min}) {
-        @content;
-    }
+  @media (min-width: #{var.$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin commonView {
+  max-width: 100vw;
+  padding: 60px 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
 }

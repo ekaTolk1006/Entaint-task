@@ -1,38 +1,16 @@
-@use '../../assets/styles/gVariables' as var;
+@use "../../assets/styles/gVariables" as var;
 
 .search {
-    display: flex;
-    position: relative;
-    border: 1px solid var.$primary;
-    padding: var.$default-measure;
-    border-radius: 30px;
-    max-height: 51px;
+  display: flex;
+  position: relative;
+  border: 1px solid var.$primary;
+  padding: var.$default-measure;
+  border-radius: 30px;
+  max-height: 51px;
 
-    input {
-        flex: 1;
-        outline: none;
-        width: 97%;
-    }
-
-    button {
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: var.$lightBlue;
-        color: var.$secondary;
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-
-        &:hover {
-            background-color: var.$primary;
-            color: var.$lightBlue;
-        }
-
-
-    }
+  input {
+    flex: 1;
+    outline: none;
+    width: 97%;
+  }
 }

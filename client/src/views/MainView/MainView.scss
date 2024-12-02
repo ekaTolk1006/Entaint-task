@@ -1,7 +1,4 @@
+@use ".././../assets/styles/_gMixins/layouts.scss" as layout;
 .mainViewBlock {
-    max-width: 100vw;
-    padding: 60px 150px;
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
+  @include layout.commonView;
 }

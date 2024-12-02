@@ -10,6 +10,11 @@
     &__navigation {
         display: flex;
         gap: var.$default-measure ;
+
+        &-link {
+            text-decoration: none;
+            color: var.$secondary;
+        }
     }
 
     li {

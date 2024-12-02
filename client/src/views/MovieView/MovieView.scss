@@ -1,0 +1,58 @@
+@use "../../assets/styles/_gMixins/layouts.scss" as layout;
+@use "../../assets/styles/gVariables" as var;
+
+.movieView {
+  width: 100%;
+}
+
+.movie {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-height: 534px;
+
+  @include layout.md {
+    flex-direction: row;
+    gap: 30px;
+    padding: 30px;
+  }
+
+  img {
+    z-index: 1;
+    height: 150px;
+    width: 150px;
+
+    @include layout.md {
+      border-radius: 30px;
+      height: 450px;
+      width: 300px;
+    }
+  }
+
+  &__details {
+    z-index: 1;
+    color: var.$secondary;
+    &-genres {
+      display: flex;
+      gap: 8px;
+    }
+    &-facts {
+      display: flex;
+      gap: 8px;
+    }
+
+    &-overview {
+      margin-top: 30px;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+}

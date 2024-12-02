@@ -1,0 +1,13 @@
+.pagination {
+  display: flex;
+  gap: 8px;
+
+  &__btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    &--active {
+      background-color: lightgray;
+    }
+  }
+}

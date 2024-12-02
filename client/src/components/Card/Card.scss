@@ -1,44 +1,39 @@
-@use '../../assets/styles/gVariables' as var;
-@use '../../assets/styles/_gMixins/layouts.scss' as layout;
+@use "../../assets/styles/gVariables" as var;
+@use "../../assets/styles/_gMixins/layouts.scss" as layout;
 
 $border-radius: 8px;
 
 .card {
-    height: 300px;
-    width: 150px;
-    border-radius: $border-radius;
-    overflow: hidden;
+  height: 300px;
+  width: 150px;
+  border-radius: $border-radius;
+  overflow: hidden;
 
+   &__details {
+    padding: var.$default-measure;
 
-    &__imgBlock {
-        display: block;
-        height: 70%;
+    &-title {
+      font-weight: bold;
+      cursor: pointer;
 
-        &__img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: $border-radius;
-
-        }
+      &:hover {
+        color: var.$lightBlue;
+      }
     }
 
-    &__details {
-        padding: var.$default-measure;
+    &-description {
+      color: var.$grey;
+    }
+  }
+}
 
-        &__title {
-            font-weight: bold;
-            cursor: pointer;
-
-            &:hover {
-                color: var.$lightBlue;
-            }
-
-        }
-
-        &__description {
-            color: var.$grey;
-        }
-
+.image {
+    display: block;
+    height: 70%;
+    img {
+        width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: $border-radius;
     }
 }
