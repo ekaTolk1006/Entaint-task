@@ -31,4 +31,5 @@ describe("components/Pagination", () => {
       expect(mockedOnClickFunc).toHaveBeenCalled();
     }
   });
+  
 });
