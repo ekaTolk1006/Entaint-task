@@ -8,7 +8,8 @@ export interface I_Pagination {
 }
 
 const Pagination: React.FC<I_Pagination> = ({ pages, onClick, activePage }) => {
-  const handleClick = (index: number) => {
+  
+  const handleClick = (index: number): void => {
     return onClick(index);
   };
 

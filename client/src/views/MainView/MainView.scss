@@ -1,17 +1,32 @@
-
+@use "../../assets/styles/_gMixins/layouts.scss" as layout;
 
 .mainView {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-top: 16px;
+  width: 316px;
+
+  @include layout.sm {
+    width: 500px;
+  }
+  @include layout.md {
+    width: 648px;
+  }
+
+  @include layout.lg {
+    width: 814px;
+  }
 
   &__cardList {
     margin-top: 15px;
-  }
 
+    &-message {
+      margin-top: 50px;
+    }
+  }
 }
 
 .paginationBlock {
-  margin-top: 16px
+  margin-top: -16px;
 }
-

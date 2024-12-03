@@ -1,13 +1,13 @@
 import { Link } from "react-router";
 import "./Header.scss";
 
-interface I_Layout {}
-
-const Header: React.FC<I_Layout> = ({}) => {
+const Header: React.FC = () => {
   return (
     <header className="header">
       <ul className="header__navigation">
-        <Link className="header__navigation-link" to={"/"}>Movies</Link>
+        <Link className="header__navigation-link" to={"/"}>
+          Movies
+        </Link>
       </ul>
     </header>
   );

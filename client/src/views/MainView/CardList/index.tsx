@@ -14,7 +14,7 @@ const CardList: React.FC<I_CardList> = ({ data }) => {
         <Card
           title={item.title}
           description={item.release_date}
-          image={item.backdrop_path}
+          image={item.poster_path}
           id={item.id}
         />
       ))}

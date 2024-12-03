@@ -10,15 +10,15 @@ export interface I_Card {
 
 const Card: React.FC<I_Card> = ({ title, image, description, id }) => {
   return (
-    <div className="card">
-      <Link to={`movie/${id}`} className="image">
+    <Link style={{textDecoration:'none', color:'inherit'}} to={`movie/${id}`} className="card">
+      <div  className="image">
         <img src={image} alt="" />
-      </Link>
+      </div>
       <div className="card__details">
         <a className="card__details-title">{title}</a>
         <p className="card__details-description">{description}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 

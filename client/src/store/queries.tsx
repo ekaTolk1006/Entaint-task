@@ -5,7 +5,7 @@ import {
   I_MovieListRes,
 } from "../interfaces/API";
 
-const BASE_URL = "http://localhost:3001/api";
+const BASE_URL:string = "http://localhost:3001/api";
 
 export const popularMoviesApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: BASE_URL }),

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import Search from "../../components/Search";
 import { useGetMovieListQuery } from "../../store/queries";
 import CardList from "./CardList";
@@ -53,14 +53,19 @@ const MainView: React.FC<I_MainView> = () => {
     <div className="mainView">
       <Search
         placeholder={PLACEHOLDER_TEXT}
-        onChange={(e) => setValue(e.target.value)}
+        onChange={(e: ChangeEvent<HTMLInputElement>) =>
+          setValue(e.target.value)
+        }
         value={value}
       />
+
       <div className="mainView__cardList">
         {filteredData?.length ? (
           <CardList data={isSearching ? filteredData : paginatedItems} />
         ) : (
-          <h1>{NO_DATA_TEXT}</h1>
+          <div className="mainView__cardList-message">
+            <h1>{NO_DATA_TEXT}</h1>
+          </div>
         )}
       </div>
       <div className="paginationBlock">
