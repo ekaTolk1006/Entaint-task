@@ -1,7 +1,7 @@
 import React from "react";
 import "./Pagination.scss";
 
-interface I_Pagination {
+export interface I_Pagination {
   pages: number;
   activePage: number;
   onClick: (index: number) => void;

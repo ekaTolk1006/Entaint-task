@@ -1,7 +1,7 @@
 import "./Search.scss";
 import React from "react";
 
-interface I_Search {
+export interface I_Search {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   value: string;
   placeholder: string;
@@ -9,7 +9,7 @@ interface I_Search {
 
 const Search: React.FC<I_Search> = ({ onChange, value, placeholder }) => {
   return (
-    <div className="search">
+    <div data-testid="search" className="search">
       <input placeholder={placeholder} onChange={onChange} value={value} />
     </div>
   );

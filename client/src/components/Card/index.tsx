@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import "./Card.scss";
 
-interface I_Card {
+export interface I_Card {
   id: number | string;
   title: string;
   image: string;
