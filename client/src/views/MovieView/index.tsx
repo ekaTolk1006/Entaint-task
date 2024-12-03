@@ -3,6 +3,7 @@ import "./MovieView.scss";
 import { useParams } from "react-router";
 import { useGetMovieByIdQuery } from "../../store/queries";
 import moment from "moment";
+import { OVERVIEW_TEXT } from "./constants";
 
 interface I_MovieView {}
 
@@ -38,7 +39,7 @@ const MovieView: React.FC<I_MovieView> = () => {
           </div>
 
           <div className="movieView__details-overview">
-            <h3>Overview</h3>
+            <h3>{OVERVIEW_TEXT}</h3>
             <p>{data?.overview}</p>
           </div>
 

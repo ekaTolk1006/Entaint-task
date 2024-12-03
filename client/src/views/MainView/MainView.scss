@@ -1,4 +1,17 @@
-@use ".././../assets/styles/_gMixins/layouts.scss" as layout;
-.mainViewBlock {
-  @include layout.commonView;
+
+
+.mainView {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+
+  &__cardList {
+    margin-top: 15px;
+  }
+
 }
+
+.paginationBlock {
+  margin-top: 16px
+}
+

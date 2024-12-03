@@ -1,14 +1,21 @@
 @use "../../../assets/styles/_gMixins/layouts.scss" as layout;
 
 .cardList {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 
-  @include layout.md {
-    flex-direction: row;
-    justify-content: start;
+  @include layout.sm {
+    grid-template-columns: repeat(3, 1fr);
   }
+
+  @include layout.md {
+   grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include layout.lg {
+    grid-template-columns: repeat(5, 1fr);
+   }
+
+
 }

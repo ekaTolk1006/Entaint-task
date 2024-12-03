@@ -6,7 +6,12 @@ import CardList from "./CardList";
 import "./MainView.scss";
 import Pagination from "../../components/Pagination";
 import { I_MovieData } from "../../interfaces/API";
-import { CURRENT_PAGE, PER_PAGE } from "./constants";
+import {
+  CURRENT_PAGE,
+  NO_DATA_TEXT,
+  PER_PAGE,
+  PLACEHOLDER_TEXT,
+} from "./constants";
 interface I_MainView {}
 
 const MainView: React.FC<I_MainView> = () => {
@@ -45,20 +50,26 @@ const MainView: React.FC<I_MainView> = () => {
   }, [value, data]);
 
   return (
-    <div className="mainViewBlock">
-      <Search onChange={(e) => setValue(e.target.value)} value={value} />
-      {filteredData?.length ? (
-        <CardList data={isSearching ? filteredData : paginatedItems} />
-      ) : (
-        <div>
-          <h1>No data</h1>
-        </div>
-      )}
-      <Pagination
-        pages={totalPages}
-        activePage={currentPage}
-        onClick={handlePageChange}
+    <div className="mainView">
+      <Search
+        placeholder={PLACEHOLDER_TEXT}
+        onChange={(e) => setValue(e.target.value)}
+        value={value}
       />
+      <div className="mainView__cardList">
+        {filteredData?.length ? (
+          <CardList data={isSearching ? filteredData : paginatedItems} />
+        ) : (
+          <h1>{NO_DATA_TEXT}</h1>
+        )}
+      </div>
+      <div className="paginationBlock">
+        <Pagination
+          pages={totalPages}
+          activePage={currentPage}
+          onClick={handlePageChange}
+        />
+      </div>
     </div>
   );
 };

@@ -4,12 +4,13 @@ import React from "react";
 interface I_Search {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   value: string;
+  placeholder: string;
 }
 
-const Search: React.FC<I_Search> = ({ onChange, value }) => {
+const Search: React.FC<I_Search> = ({ onChange, value, placeholder }) => {
   return (
     <div className="search">
-      <input onChange={onChange} value={value} />
+      <input placeholder={placeholder} onChange={onChange} value={value} />
     </div>
   );
 };
