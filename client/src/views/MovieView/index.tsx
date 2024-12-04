@@ -5,9 +5,7 @@ import { useGetMovieByIdQuery } from "../../store/queries";
 import moment from "moment";
 import { OVERVIEW_TEXT, TIME_FORMAT, YEAR_FORMAT } from "./constants";
 
-interface I_MovieView {}
-
-const MovieView: React.FC<I_MovieView> = () => {
+const MovieView: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const { data } = useGetMovieByIdQuery(Number(id));
   const runtime: string = moment(data?.runtime).format(TIME_FORMAT);
