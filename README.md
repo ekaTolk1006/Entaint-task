@@ -9,3 +9,5 @@ Should go to the client and enter "npm i" command to install all dependencies an
 Project starting: 
 To start the server should use command: npm run dev;
 When server started should start React application, go to the client direction and run: npm run dev;
+
+To run unit tests shoult go to the client directory and use the command - npm run test
