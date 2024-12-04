@@ -33,6 +33,10 @@
     overflow: hidden;
     z-index: 1;
     color: var.$secondary;
+    &-title {
+      display: flex;
+      gap: 8px;
+    }
     &-overview {
       margin-top: 30px;
     }

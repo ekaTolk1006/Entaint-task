@@ -24,13 +24,13 @@ const MovieView: React.FC<I_MovieView> = () => {
       >
         <img src={data?.poster_path} />
         <div className="movie__details">
-          <h2>
+          <h2 className="movie__details-title">
             {data?.title}
-            <span>{moment(data?.release_date).format(YEAR_FORMAT)}</span>
+            <span>{`(${moment(data?.release_date).format(YEAR_FORMAT)})`}</span>
           </h2>
           <div className="movie__details-facts">
             <span>{data?.release_date}</span>
-            <span className="movie__details-facts-genres">
+            <span className="movie__details-genres">
               {data?.genres?.map((genre) => (
                 <span>{genre.name}</span>
               ))}
