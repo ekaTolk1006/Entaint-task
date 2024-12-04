@@ -12,9 +12,10 @@ import {
   PER_PAGE,
   PLACEHOLDER_TEXT,
 } from "./constants";
-interface I_MainView {}
 
-const MainView: React.FC<I_MainView> = () => {
+
+
+const MainView: React.FC = () => {
   const { data } = useGetMovieListQuery({ page: 1 });
   const [filteredData, setFilteredData] = useState<Array<I_MovieData>>([]);
   const [value, setValue] = useState<string>("");
